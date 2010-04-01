@@ -529,7 +529,7 @@
 		this.settings = s = extend({
 			content_css : punymce.baseURL + 'css/content.css',
 			editor_css : punymce.baseURL + 'css/editor.css',
-			blank_file : punymce.baseURL + 'blank.htm',
+			blank_file : punymce.baseURL + 'blank.html',
 			width : 0,
 			height : 0,
 			min_width : 260,
