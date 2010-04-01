@@ -36,18 +36,7 @@
 		<!-- Concat multuple JS files together -->
 		<concat destfile="js/punymce/puny_mce.full.tmp.js">
 			<fileset dir="js" includes="punymce/puny_mce_src.js" />
-			<fileset dir="js" includes="punymce/plugins/forceblocks_src.js" />
-			<fileset dir="js" includes="punymce/plugins/emoticons/emoticons_src.js" />
-			<fileset dir="js" includes="punymce/plugins/editsource/editsource_src.js" />
-			<fileset dir="js" includes="punymce/plugins/image/image_src.js" />
-			<fileset dir="js" includes="punymce/plugins/link/link_src.js" />
-			<fileset dir="js" includes="punymce/plugins/textcolor/textcolor_src.js" />
-			<fileset dir="js" includes="punymce/plugins/paste_src.js" />
-			<fileset dir="js" includes="punymce/plugins/bbcode_src.js" />
-			<fileset dir="js" includes="punymce/plugins/entities_src.js" />
-			<fileset dir="js" includes="punymce/plugins/protect_src.js" />
-			<fileset dir="js" includes="punymce/plugins/tabfocus_src.js" />
-			<fileset dir="js" includes="punymce/plugins/safari2x_src.js" />
+			<fileset dir="js" includes="punymce/plugins/**/*_src.js" />
 		</concat>
 
 		<!-- Compress PunyMCE full and base using the YUI Compressor -->
@@ -55,18 +44,19 @@
 		<yuicompress infile="js/punymce/puny_mce_src.js" outfile="js/punymce/puny_mce.js" />
 
 		<!-- Compress all PunyMCE plugins using the YUI Compressor -->
-		<yuicompress infile="js/punymce/plugins/forceblocks_src.js" outfile="js/punymce/plugins/forceblocks.js" />
-		<yuicompress infile="js/punymce/plugins/emoticons/emoticons_src.js" outfile="js/punymce/plugins/emoticons/emoticons.js" />
+		<yuicompress infile="js/punymce/plugins/bbcode_src.js" outfile="js/punymce/plugins/bbcode.js" />
 		<yuicompress infile="js/punymce/plugins/editsource/editsource_src.js" outfile="js/punymce/plugins/editsource/editsource.js" />
+		<yuicompress infile="js/punymce/plugins/emoticons/emoticons_src.js" outfile="js/punymce/plugins/emoticons/emoticons.js" />
+		<yuicompress infile="js/punymce/plugins/entities_src.js" outfile="js/punymce/plugins/entities.js" />
+		<yuicompress infile="js/punymce/plugins/forceblocks_src.js" outfile="js/punymce/plugins/forceblocks.js" />
+		<yuicompress infile="js/punymce/plugins/forcenl_src.js" outfile="js/punymce/plugins/forcenl.js" />
 		<yuicompress infile="js/punymce/plugins/image/image_src.js" outfile="js/punymce/plugins/image/image.js" />
 		<yuicompress infile="js/punymce/plugins/link/link_src.js" outfile="js/punymce/plugins/link/link.js" />
-		<yuicompress infile="js/punymce/plugins/textcolor/textcolor_src.js" outfile="js/punymce/plugins/textcolor/textcolor.js" />
-		<yuicompress infile="js/punymce/plugins/paste_src.js" outfile="js/punymce/plugins/paste.js" />
-		<yuicompress infile="js/punymce/plugins/bbcode_src.js" outfile="js/punymce/plugins/bbcode.js" />
-		<yuicompress infile="js/punymce/plugins/entities_src.js" outfile="js/punymce/plugins/entities.js" />
+		<yuicompress infile="js/punymce/plugins/paste_src.js" outfile="js/punymce/plugins/paste.js" />		
 		<yuicompress infile="js/punymce/plugins/protect_src.js" outfile="js/punymce/plugins/protect.js" />
-		<yuicompress infile="js/punymce/plugins/tabfocus_src.js" outfile="js/punymce/plugins/tabfocus.js" />
 		<yuicompress infile="js/punymce/plugins/safari2x_src.js" outfile="js/punymce/plugins/safari2x.js" />
+		<yuicompress infile="js/punymce/plugins/tabfocus_src.js" outfile="js/punymce/plugins/tabfocus.js" />
+		<yuicompress infile="js/punymce/plugins/textcolor/textcolor_src.js" outfile="js/punymce/plugins/textcolor/textcolor.js" />
 
 		<delete file="js/punymce/puny_mce.full.tmp.js" quiet="true" />
 	</target>

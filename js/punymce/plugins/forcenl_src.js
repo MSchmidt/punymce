@@ -1,5 +1,9 @@
-// ForceNL Plugin for PunyMCE
-//   - Converts all <br /> to \n
+/**
+ * ForceNL Plugin for PunyMCE
+ * Converts all <br /> to \n - especially useful when used with bbcode plugin
+ *
+ * @author Matthias Schmidt
+ */
 punymce.plugins.ForceNL = function(ed) {
 	// Forces <br /> to \n
 	ed.onGetContent.add(function(ed, o) {
@@ -7,7 +11,6 @@ punymce.plugins.ForceNL = function(ed) {
 			punymce.each([
 				[/<(br\s*\/)>/gi, "\n"],
 				[/<(br.*?\/)>/gi, ""]
-				//[<br type="_moz"/>, ""]
 			], function (v) {
 				o.content = o.content.replace(v[0], v[1]);
 			});
