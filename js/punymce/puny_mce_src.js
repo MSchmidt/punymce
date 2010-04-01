@@ -527,8 +527,9 @@
 
 		// Default settings
 		this.settings = s = extend({
-			content_css : punymce.baseURL + '/css/content.css',
-			editor_css : punymce.baseURL + '/css/editor.css',
+			content_css : punymce.baseURL + 'css/content.css',
+			editor_css : punymce.baseURL + 'css/editor.css',
+			blank_file : punymce.baseURL + 'blank.htm',
 			width : 0,
 			height : 0,
 			min_width : 260,
@@ -962,7 +963,7 @@
 				// WebKit needs to be loaded this way to force it in to quirksmode to get <b> instead of <span>
 				if (isWebKit) {
 					Event.add(n, 'load', setup, t);
-					n.src = punymce.baseURL + 'blank.htm';
+					n.src = s.blank_file;
 				} else
 					setup();
 
